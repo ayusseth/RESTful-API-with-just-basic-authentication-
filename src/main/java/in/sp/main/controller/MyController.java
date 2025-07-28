@@ -38,4 +38,11 @@ public class MyController {
            return ResponseEntity.notFound().build();
        }
     }
+
+    @DeleteMapping("/user/{id}")
+    public ResponseEntity<Void> deleteuser(@PathVariable int id)
+    {
+        userService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }

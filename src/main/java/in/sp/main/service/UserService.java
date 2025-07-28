@@ -11,4 +11,5 @@ public interface UserService
 
     public List<User> getAllUser();
     public Optional<User> getUser(int id);
+    public void delete(int id);
 }
